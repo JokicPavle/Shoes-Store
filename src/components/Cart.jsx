@@ -11,7 +11,7 @@ export const Cart = ({ cartNav, setCartNav }) => {
       <div
         className={
           cartNav
-            ? "absolute top-0 right-0 w-[300px] sm:w-[400px] h-auto bg-white z-10 duration-200 overflow-y-clip"
+            ? "absolute top-[70px] right-0 w-[100%] sm:w-[400px] h-auto bg-white z-10 duration-200 overflow-y-clip"
             : "absolute top-0 right-[-100%] w-[400px] h-auto bg-orange-200 z-10 duration-300"
         }
       >

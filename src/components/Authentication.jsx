@@ -29,19 +29,19 @@ export const Authentication = (props) => {
       {authenticatedUser === null ? (
         <div>
           <Link className="inline" to="/login">
-            <button className="p-2 sm:p-3 sm:px-7 bg-orange-400 text-white border border-double border-spacing-10 mx-2 hover:bg-orange-800">
+            <button className="p-2 sm:p-3 sm:px-7 text-white border border-double border-spacing-10 mx-2 hover:text-orange-500">
               Login
             </button>
           </Link>
         </div>
       ) : (
         <div className="flex flex-col sm:flex-row sm:justify-between items-center">
-          <p className="text-center mb-1">
+          {/* <p className="text-center mb-1">
             Welcome <span className="font-bold">{authenticatedUser.email}</span>
-          </p>
+          </p> */}
           <button
             onClick={handleSignOut}
-            className="p-1 sm:p-3 sm:px-7 bg-orange-400 text-white border border-double border-spacing-10 sm:mx-2 hover:bg-orange-800"
+            className="sm:p-3 sm:px-7 text-gray sm:mx-2 hover:text-orange-500"
           >
             Logout
           </button>

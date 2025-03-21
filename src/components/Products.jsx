@@ -18,11 +18,11 @@ export const Products = () => {
   } = useContext(ShopContext);
   return (
     <>
-      <h1 className="text-center mx-auto text-2xl sm:text-6xl font-bold my-10 text-gray-800">
+      <h1 className="text-center mx-auto text-xl sm:text-6xl font-bold my-5 text-gray-800">
         My Products
       </h1>
-      <div className="max-w-[1600px] m-auto text-center flex flex-col justify-around my-16">
-        <div className="flex flex-col justify-around gap-4 items-center sm:flex-row sm:justify-start">
+      <div className="max-w-[1600px] m-auto text-center flex flex-col justify-around my-5">
+        <div className="flex flex-col justify-around gap-4 items-center sm:flex-row sm:justify-center">
           <input
             onChange={(e) => {
               searchItems(e);
@@ -40,20 +40,22 @@ export const Products = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 mb-20 sm:h-[1350px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mx-10 items-start">
+      <div className="grid grid-cols-1 mb-20 min-h-[500px] sm:h-auto lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mx-5  items-start">
         {currentItems.map((product) => (
           <Product data={product} key={product.id} />
         ))}
       </div>
-      <Pagination
-        length={filteredItems.length}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-        paginate={paginate}
-        previousPage={previousPage}
-        nextPage={nextPage}
-        pageNumber={pageNumber}
-      />
+
+<Pagination
+  className="mt-10"
+  length={filteredItems.length}
+  itemsPerPage={itemsPerPage}
+  currentPage={currentPage}
+  paginate={paginate}
+  previousPage={previousPage}
+  nextPage={nextPage}
+  pageNumber={pageNumber}
+/>
     </>
   );
 };

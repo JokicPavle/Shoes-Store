@@ -21,12 +21,12 @@ export const Product = (props) => {
   };
   return (
     <>
-      <div className="border-orange-600 p-3 bg-[#f6f6f6] border rounded-xl hover:scale-105 duration-300">
+      <div className="border-orange-600 p-3 bg-[#f6f6f6] border rounded-md hover:scale-105 duration-300">
         <Link to={`/shoesinfo/${id}`}>
-          <img className="m-auto sm:w-[415px]" src={image} alt="/" />
+          <img className="m-auto w-[200px] sm:w-[415px]" src={image} alt="/" />
         </Link>
         <div>
-          <h1 className="text-2xl py-2 font-bold h-[80px]">{name}</h1>
+          <h1 className="text-2xl py-2 font-bold h-[80px] text-center sm:text-left">{name}</h1>
         </div>
         <div className="flex justify-between">
           <h3 className="text-gray-400 font-semibold">{category}</h3>
@@ -36,7 +36,7 @@ export const Product = (props) => {
           {sizes?.map((size, index) => (
             <div
               key={index}
-              className={`border-orange-500 cursor-pointer py-1 my-2 px-4 border flex items-center justify-center text-center mx-1 rounded-2xl ${
+              className={`border-orange-500 cursor-pointer py-1 my-2 px-4 border flex items-center justify-center text-center mx-1 rounded-md ${
                 selectedSize === size ? "bg-gray-300" : ""
               }`}
               onClick={() => handleSizeClick(size)}
